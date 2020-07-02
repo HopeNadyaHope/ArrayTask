@@ -1,9 +1,9 @@
-package by.epam.mtv.task3;
+package by.epam.array.task5;
 
 import java.util.Scanner;
 
-public class Arrays5 {
-	 
+public class Array5 {
+	
 	public static double GetSum (double[] array) {
 		if(array.length == 1)
 			return array[0];

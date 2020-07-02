@@ -1,12 +1,11 @@
-package by.epam.mtv.task3;
+package by.epam.array.task2;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Arrays2 {
+public class Array2 {
 	
 	///////////////////////GetMin////////////////////////
-	public static double GetMin(double []array) {
+	public static double findMin(double []array) {
 		double min;
 		min = array[0];
 		for(double x : array) {
@@ -16,7 +15,7 @@ public class Arrays2 {
 		return min;
 	}
 	///////////////////////GetCount///////////////////////
-	public static int GetCount(double []array, double min) {
+	public static int countingMin(double []array, double min) {
 		int count;
 		count = 0; 
 		for(double x : array) {
@@ -27,9 +26,9 @@ public class Arrays2 {
 	}
 	
 	/////////////////////CreateArrayWithoutMin/////////////
-	public static double[] CreateArrayWithoutMin(double [] array){
-		double min = GetMin(array); 
-		int count = GetCount(array, min);
+	public static double[] createArrayWithoutMin(double [] array){
+		double min = findMin(array); 
+		int count = countingMin(array, min);
 		double[] resultArray = new double[array.length - count];
 		int ind;
 		ind = 0;
@@ -59,7 +58,7 @@ public class Arrays2 {
 			System.out.print(x + " ");
 		System.out.println();
 		
-		double[] resultArray = CreateArrayWithoutMin(array);
+		double[] resultArray = createArrayWithoutMin(array);
 		System.out.println("Array without min: ");
 		for(double x : resultArray)
 			System.out.print(x + " ");

@@ -1,12 +1,12 @@
-package by.epam.mtv.task3;
+package by.epam.array.task3;
 
 import java.util.Random;
 
 
-public class Arrays3 {
+public class Array3 {
 	
 	/////////////////CreateLock//////////////////////////
-	public static int[] CreateLock(int length) {
+	public static int[] createLock(int length) {
 		int [] lock = new int [10];
 		
 		Random rn = new Random();
@@ -23,8 +23,8 @@ public class Arrays3 {
 		return lock;
 	}
 	
-	/////////////////GetFilledIndex//////////////////////////
-	public static int[] GetFilledIndex(int[] lock) {
+	/////////////////FilledIndex//////////////////////////
+	public static int[] filledIndex(int[] lock) {
 		int[] index = new int[2];
 		int i;
 		i = 0;
@@ -42,9 +42,9 @@ public class Arrays3 {
 		
 	}
 	/////////////////CreateCode//////////////////////////
-	public static int[] CreateCode(int[] lock) {
+	public static int[] createCode(int[] lock) {
 		int[] filledIndex;
-		filledIndex= GetFilledIndex(lock);
+		filledIndex= filledIndex(lock);
 		int firstValue = lock[filledIndex[0]];
 		int secondValue = lock[filledIndex[1]];
 		
@@ -90,7 +90,7 @@ public class Arrays3 {
 		System.out.println("Create lock : ");
         
 		int[] lock;
-		lock = CreateLock(10);		
+		lock = createLock(10);		
 		for(int x : lock)
 			System.out.print(x + " ");
 		System.out.println();
@@ -99,7 +99,7 @@ public class Arrays3 {
 		System.out.println("Unlock : ");
 
 		int[] code;
-		code = CreateCode(lock);		
+		code = createCode(lock);		
 		if(code == null)
 			System.out.println("Can't be unlocked");
 		else {			

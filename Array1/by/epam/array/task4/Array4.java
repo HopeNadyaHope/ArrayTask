@@ -1,12 +1,12 @@
-package by.epam.mtv.task3;
+package by.epam.array.task4;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Arrays4 {
+public class Array4 {
 
-	///////////////////GetMostOften////////////////////////
-	public static int GetMostOften(int[] array) {
+	///////////////////MostOften////////////////////////
+	public static int mostOften(int[] array) {
 		int[] frequency = new int [array.length];
 		
 		for (int i = 0; i < array.length; i++) 
@@ -54,7 +54,7 @@ public class Arrays4 {
 		System.out.println();
 
 		
-		System.out.println("The most often number : " +  GetMostOften(array));
+		System.out.println("The most often number : " +  mostOften(array));
 	}
 
 }

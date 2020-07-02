@@ -1,11 +1,11 @@
-package by.epam.mtv.task3;
+package by.epam.array.task1;
 
 import java.util.Scanner;
 
-public abstract class Arrays1 {
+public abstract class Array1 {
 		
-	/////////////////GetMaxSum////////////////////////////
-	public static double GetMaxSum(double []array) {
+	/////////////////maxSum////////////////////////////
+	public static double maxSum(double []array) {
 		double max;
 		max = array[0] + array [array.length - 1];
 		
@@ -38,7 +38,7 @@ public abstract class Arrays1 {
 		}
 		System.out.println();
 		
-		System.out.println("Max sum : " + GetMaxSum(array));
+		System.out.println("Max sum : " + maxSum(array));
 	}
 
 }
